@@ -13,7 +13,7 @@ function curl_download($post, $get, $cookies, $url) {
 
     // Now set some options (most are optional)
     // Set URL to download
-    curl_setopt($ch, CURLOPT_URL, $url . $get);
+    curl_setopt($ch, CURLOPT_URL, $url . "?" . $get);
 
     // Set a referer
     curl_setopt($ch, CURLOPT_REFERER, $url);
@@ -57,6 +57,8 @@ function curl_download($post, $get, $cookies, $url) {
 
 }
 
-curl_download($_POST,$_GET,$_COOKIES,$_POST['81736358b1645103ae83247b10c5f82af641ddfc']);
+//curl_download($_POST,$_GET,$_COOKIES,$_POST['81736358b1645103ae83247b10c5f82af641ddfc']);
+echo curl_download($_POST,$_GET,$_COOKIES,"www.google.com");
 
+echo error_get_last();
 ?>
