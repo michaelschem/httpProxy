@@ -1,7 +1,5 @@
 <?PHP
 
-require_once("simple_html_dom.php");
-
 function curl_download($post, $get, $cookies, $url) {
     // is cURL installed yet?
     if (!function_exists('curl_init')) {
@@ -57,7 +55,6 @@ function curl_download($post, $get, $cookies, $url) {
 
 }
 
-//curl_download($_POST,$_GET,$_COOKIES,$_POST['81736358b1645103ae83247b10c5f82af641ddfc']);
 echo curl_download($_POST,$_GET,$_COOKIES,"www.google.com");
 
 echo error_get_last();
